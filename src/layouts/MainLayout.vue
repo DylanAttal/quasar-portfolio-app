@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header bordered class="bg-primary text-white" height-hint="98">
+    <q-header bordered class="bg-blue-grey-10 text-white" height-hint="98">
       <q-toolbar>
         <q-toolbar-title>
           <q-btn
@@ -8,14 +8,31 @@
             flat
             size="xl"
             :ripple="{ center: true }"
+            @click="scrollTo('top')"
           />
         </q-toolbar-title>
 
         <q-tabs>
-          <q-tab label="Portfolio" :ripple="{ center: true }" />
-          <q-tab label="Resume" :ripple="{ center: true }" />
-          <q-tab label="About" :ripple="{ center: true }" />
-          <q-tab label="Contact" :ripple="{ center: true }" />
+          <q-tab
+            @click="scrollTo('portfolio')"
+            label="Portfolio"
+            :ripple="{ center: true }"
+          />
+          <q-tab
+            @click="scrollTo('resume')"
+            label="Resume"
+            :ripple="{ center: true }"
+          />
+          <q-tab
+            @click="scrollTo('about')"
+            label="About"
+            :ripple="{ center: true }"
+          />
+          <q-tab
+            @click="scrollTo('contact')"
+            label="Contact"
+            :ripple="{ center: true }"
+          />
         </q-tabs>
       </q-toolbar>
     </q-header>
@@ -34,6 +51,14 @@ export default {
 
   data() {
     return {};
+  },
+
+  methods: {
+    scrollTo(id) {
+      document
+        .getElementById(id)
+        .scrollIntoView({ block: "end", behavior: "smooth" });
+    }
   }
 };
 </script>
