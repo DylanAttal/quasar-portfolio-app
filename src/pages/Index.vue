@@ -112,14 +112,30 @@
         class="resume-picture q-mb-xl"
       />
     </section>
-    <section id="about">
-      <h2>about</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-        excepturi, illum nesciunt accusamus qui sunt nam voluptate cum doloribus
-        consequatur rerum animi consectetur inventore veniam alias labore
-        quaerat aperiam nostrum!
-      </p>
+    <section id="about" class="column justify-center items-center full-width">
+      <h2>About Me</h2>
+      <div class="row justify-center items-center">
+        <div class="col-md-5 q-ml-lg q-mr-lg">
+          <p class="text-h5">
+            Self-motivated full stack web developer with a proven track record
+            of learning and implementing new technologies. Passionate about
+            writing clean code and leveraging strengths of diverse teams. I have
+            an entrepreneurial spirit paired with a relentless work ethic. I am
+            a skilled communicator with excellent interpersonal and
+            problem-solving skills.
+          </p>
+        </div>
+        <div class="col-md-5 q-ml-lg q-mr-lg">
+          <p class="text-h5">
+            Tampa native with a passion for home-cooked meals and freshly-ground
+            coffee. I believe that natural springs are Florida's best-kept
+            secret; on the weekends you can find me on Rainbow River or St. Pete
+            beach. As a card-carrying nerd, I enjoy reading non-fiction and
+            watching anime, and my lifelong dream is to vacation in Japan during
+            the spring to see the cherry blossoms in full bloom.
+          </p>
+        </div>
+      </div>
     </section>
     <section id="contact" class="bg-teal-4">
       <h2>contact</h2>
