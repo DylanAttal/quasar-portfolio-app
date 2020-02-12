@@ -137,24 +137,57 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="bg-teal-4">
-      <h2>contact</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-        excepturi, illum nesciunt accusamus qui sunt nam voluptate cum doloribus
-        consequatur rerum animi consectetur inventore veniam alias labore
-        quaerat aperiam nostrum!
-      </p>
+    <section
+      id="contact"
+      class="column justify-center items-center full-width bg-teal-4"
+    >
+      <h2>Contact Me</h2>
+      <div class="row justify-center items-center full-width full-height">
+        <div class="q-col-md-4">
+          <a href="mailto:attal.dylan@gmail.com" target="_blank"
+            ><q-icon :name="fasEnvelope" class="contact-icon q-ml-md q-mr-md"
+          /></a>
+        </div>
+
+        <div class="q-col-md-4">
+          <a href="https://www.linkedin.com/in/dylanattal/" target="_blank"
+            ><q-icon :name="fabLinkedinIn" class="contact-icon q-ml-md q-mr-md"
+          /></a>
+        </div>
+
+        <div class="q-col-md-4">
+          <a href="https://github.com/DylanAttal" target="_blank"
+            ><q-icon
+              :name="fabGithubSquare"
+              class="contact-icon q-ml-md q-mr-md"
+          /></a>
+        </div>
+
+        <div class="q-col-md-4">
+          <a href="https://medium.com/@DylanAttal" target="_blank"
+            ><q-icon :name="fabMedium" class="contact-icon q-ml-md q-mr-md"
+          /></a>
+        </div>
+      </div>
     </section>
   </q-page>
 </template>
 
 <script>
+import { fasEnvelope } from "@quasar/extras/fontawesome-v5";
+import { fabLinkedinIn } from "@quasar/extras/fontawesome-v5";
+import { fabGithubSquare } from "@quasar/extras/fontawesome-v5";
+import { fabMedium } from "@quasar/extras/fontawesome-v5";
+
 export default {
   name: "PageIndex",
   data() {
     return {
-      showHitchDialog: false
+      showHitchDialog: false,
+      fasEnvelope: fasEnvelope,
+      fabLinkedinIn: fabLinkedinIn,
+      fabGithubSquare: fabGithubSquare,
+      fabMedium: fabMedium
     };
   }
 };
@@ -183,6 +216,20 @@ section {
 
 .resume-picture {
   max-height: 700px;
+  width: auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
+  }
+}
+
+.contact-icon {
+  height: 50px;
   width: auto;
 }
 </style>
