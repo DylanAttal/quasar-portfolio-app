@@ -1,26 +1,45 @@
-# Dylan Attal Portfolio (quasar-portfolio-app)
+# Quasar Portfolio Demo App
 
-Personal portfolio site for Dylan Attal featuring software development projects.
+## Summary
 
-## Install the dependencies
-```bash
-npm install
-```
+This app was built as a demo for the Vue.js Tampa Bay meetup on 2/13/19.
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+You can build this app by following along with the [commits](https://github.com/DylanAttal/quasar-portfolio-app/commits/master).
 
-### Lint the files
-```bash
-npm run lint
-```
+## Install Quasar CLI
 
-### Build the app for production
-```bash
-quasar build
-```
+`npm install -g @quasar/cli`
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+See the [Quasar CLI Docs](https://quasar.dev/quasar-cli/installation) for more information.
+
+## Scaffold a Quasar app
+
+Navigate to the directory where you want your project to be made, then run
+
+`quasar create <folder-name>`
+
+## Run a Quasar app locally
+
+`quasar dev`
+
+## Build and Deploy Quasar SPA
+
+`quasar build`
+
+Then make sure to deploy from the dist/spa folder.
+
+For example, to deploy to Surge from this app, I'd navigate in my terminal to quasar-portfolio-app/dist/spa then run the command `surge`.
+
+## Helpful Links
+
+[Quasar Docs](https://quasar.dev/start/pick-quasar-flavour)
+
+[Layout Builder](https://quasar.dev/layout-builder)
+
+[Color Palette](https://quasar.dev/style/color-palette)
+
+[Q-Tab](https://quasar.dev/vue-components/tabs)
+
+[Q-Card](https://quasar.dev/vue-components/card)
+
+[Q-Dialog](https://quasar.dev/vue-components/dialog)
