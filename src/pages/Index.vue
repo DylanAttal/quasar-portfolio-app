@@ -15,13 +15,19 @@
       </p>
     </section>
     <section id="portfolio">
-      <h2>portfolio</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-        excepturi, illum nesciunt accusamus qui sunt nam voluptate cum doloribus
-        consequatur rerum animi consectetur inventore veniam alias labore
-        quaerat aperiam nostrum!
-      </p>
+      <h2 class="text-center">Portfolio</h2>
+      <div class="q-pa-md row items-start q-gutter-md">
+        <q-card class="my-card">
+          <img src="../assets/hitch-gif.gif" class="portfolio-picture" />
+
+          <q-card-section>
+            <div class="text-h6">Hitch</div>
+            <div class="text-subtitle2">
+              Full stack app with React, Rails, and Auth0
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
     </section>
     <section id="resume" class="bg-teal-4">
       <h2>resume</h2>
@@ -59,7 +65,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section {
   min-height: calc(100vh - 62px);
 }
@@ -68,5 +74,10 @@ section {
   height: 300px;
   width: 280px;
   border-radius: 200px;
+}
+
+.portfolio-picture {
+  height: 250px;
+  width: auto;
 }
 </style>
