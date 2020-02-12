@@ -102,14 +102,15 @@
         </q-dialog>
       </div>
     </section>
-    <section id="resume" class="bg-teal-4">
-      <h2>resume</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-        excepturi, illum nesciunt accusamus qui sunt nam voluptate cum doloribus
-        consequatur rerum animi consectetur inventore veniam alias labore
-        quaerat aperiam nostrum!
-      </p>
+    <section
+      id="resume"
+      class="bg-teal-4 column justify-center items-center full-width"
+    >
+      <h2 class="text-center">Resume</h2>
+      <img
+        src="../../src/assets/DylanAttalResume.jpg"
+        class="resume-picture q-mb-xl"
+      />
     </section>
     <section id="about">
       <h2>about</h2>
@@ -161,6 +162,11 @@ section {
 
 .dialog-picture {
   max-height: 350px;
+  width: auto;
+}
+
+.resume-picture {
+  max-height: 700px;
   width: auto;
 }
 </style>
