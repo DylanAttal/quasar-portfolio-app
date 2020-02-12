@@ -17,7 +17,7 @@
     <section id="portfolio">
       <h2 class="text-center">Portfolio</h2>
       <div class="q-pa-md row items-start q-gutter-md">
-        <q-card class="my-card">
+        <q-card class="my-card cursor-pointer" @click="showHitchDialog = true">
           <img src="../assets/hitch-gif.gif" class="portfolio-picture" />
 
           <q-card-section>
@@ -27,6 +27,79 @@
             </div>
           </q-card-section>
         </q-card>
+
+        <q-dialog v-model="showHitchDialog">
+          <q-card>
+            <q-card-section>
+              <div class="text-h4">Hitch</div>
+            </q-card-section>
+
+            <q-card-section class="q-pt-none column">
+              <img
+                src="../assets/hitch-gif.gif"
+                class="dialog-picture q-mb-md"
+              />
+              <p class="text-h6">See it live</p>
+              <p>https://hitch-app.herokuapp.com/</p>
+
+              <p class="text-h6">Summary</p>
+              <p>
+                Hitch is a prototype for a peer-to-peer long-distance rideshare
+                app built with a React front-end and Rails back-end. The idea
+                behind the app is that traveling between cities in the United
+                States is hard for someone who does not own a vehicle. Public
+                transportation is lacking. Renting a car is expensive. I saw a
+                gap in the market for intercity travel, and I think peer-to-peer
+                rideshares can address it. Drivers on Hitch can afford to charge
+                a low price per seat because they're already headed in that
+                direction anyway; think of it as a friend covering your gas
+                money. It's hitchhiking for the 21st century!
+              </p>
+              <p>
+                The current prototype offers several core features: searching
+                for a ride, booking a ride, offering a drive, displaying your
+                rides and drives, and canceling your rides and drives. Users can
+                search for rides based upon departure and arrival locations,
+                dates, and times, as well as number of seats available in the
+                vehicle and the price per seat.
+              </p>
+              <p>
+                I utilized Auth0 for user authentication, and offered the
+                ability for users to sign up and log in with their Google
+                accounts. Hitch takes and stores the users' Google profile
+                pictures, full names, and email addresses, displaying that
+                information automatically on their profile pages. Users can then
+                add more information to their profiles.
+              </p>
+              <p>
+                I used Ruby ORMs to build an API with a postgresQL database.
+                Instead of scaffolding, I wrote original models, controllers,
+                and routes to manipulate user-generated data. My data is
+                represented by three tables: People, Trips, and Rides (a
+                junction table establishing the passengers for each trip).
+              </p>
+              <p>
+                I imported the library react-map-gl in order to let users choose
+                departure and arrival locations by simply dropping a pin on a
+                map. I stored the latitude and longitude of those pins in state,
+                and then passed that information to my back-end through a POST
+                request tied to a form submission. Then the latitudes and
+                longitudes were reverse-geocoded into an address by a custom
+                method which I wrote for the Geocoder gem.
+              </p>
+
+              <p class="text-h6">Technologies used</p>
+              <p>
+                HTML, CSS, Javascript, React, React Router, React-Map-GL, Axios,
+                Moment.js, Auth0, Ruby, Rails, Geocoder
+              </p>
+            </q-card-section>
+
+            <q-card-actions align="right">
+              <q-btn flat label="OK" color="primary" v-close-popup />
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
       </div>
     </section>
     <section id="resume" class="bg-teal-4">
@@ -61,7 +134,12 @@
 
 <script>
 export default {
-  name: "PageIndex"
+  name: "PageIndex",
+  data() {
+    return {
+      showHitchDialog: false
+    };
+  }
 };
 </script>
 
@@ -78,6 +156,11 @@ section {
 
 .portfolio-picture {
   height: 250px;
+  width: auto;
+}
+
+.dialog-picture {
+  max-height: 350px;
   width: auto;
 }
 </style>
